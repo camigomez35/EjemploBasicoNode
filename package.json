@@ -1,0 +1,13 @@
+{
+  "name": "chat mejorandocurso",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "3.0.6",
+    "jade": "0.28.1"
+  }
+}
