@@ -26,9 +26,25 @@ app.get('/login', function(req, res){
 app.post("/users", function(req, res){
 	var email = req.body.email;
 	var password = req.body.password;
-	console.log("email " + email);
-	console.log("password ", password);
-	res.render("vistaFinal", {email: email, password: password});
+	if(email === "camigomez35@gmail.com" && password === "123456"){
+		console.log("email " + email);
+		console.log("password ", password);
+		res.render("vistaFinal", {email: email, password: password});
+	}else{
+		res.render("error");
+	}
+	
+});
+
+app.get("/suma", function(req, res){
+	res.render("suma");
+});
+
+app.post("/suma", function(req, res){
+	var valor1 = parseInt(req.body.valor1) ;
+	var valor2 = parseInt(req.body.valor2);
+	var result = valor1 + valor2;
+	res.render("resultado", {valor1: valor1, valor2: valor2, resultado: result});
 });
 
 app.listen(8080);

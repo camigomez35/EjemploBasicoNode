@@ -1,0 +1,13 @@
+extends ./layaut.jade
+
+block contenido
+	form(action="/suma", method="POST")
+		div(class = "container form-group")
+			br
+			label(for="valor1") Valor 1
+			input(type="number", name="valor1", placeholder="valor 1", id="valor1", class="form-control" required)
+			br
+			label(for="valor2") Valor 2
+			input(type="number", name="valor2", placeholder="valor 2", id="valor2", class="form-control" required)
+			br
+			input(type="submit" value="Sumar" class="btn btn-primary")
