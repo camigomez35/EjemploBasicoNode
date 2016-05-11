@@ -28,10 +28,7 @@ app.post("/users", function(req, res){
 	var password = req.body.password;
 	console.log("email " + email);
 	console.log("password ", password);
-	res.write("Datos recibidos");
-	res.write("\nemail " + email);
-	res.write("\npassword "+ password);
-	res.end();
+	res.render("vistaFinal", {email: email, password: password});
 });
 
 app.listen(8080);
